@@ -9,12 +9,12 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentbase: './public',
+        contentBase: './public',
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
         alias: {
-            modules: __dirname + 'node_modules',
+            modules: __dirname + '/node_modules',
             jquery: 'modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
             bootstrap: 'modules/admin-lte/bootstrap/js/bootstrap.js'
         }
@@ -27,7 +27,7 @@ module.exports = {
         }),
         new ExtractTextPlugin('app.css')
     ],
-    modules: {
+    module: {
         loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
